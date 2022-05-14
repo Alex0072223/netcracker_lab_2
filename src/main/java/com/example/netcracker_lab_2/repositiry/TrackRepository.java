@@ -17,4 +17,5 @@ public interface TrackRepository extends CrudRepository<Track, Integer> {
             "t.author like %?1% or " +
             "t.genre.name like %?1%")
     List<Track> findAllByNameAlbumAuthorLike(String template);
+
 }

@@ -1,33 +1,23 @@
-package com.example.netcracker_lab_2.domain;
+/*
+package com.example.netcracker_lab_2.bootstrap;
 
-import lombok.*;
-import lombok.experimental.FieldDefaults;
+import com.example.netcracker_lab_2.domain.Track;
+import com.example.netcracker_lab_2.service.TrackServiceImpl;
 
-import javax.persistence.*;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
-import java.io.Serializable;
 
-/**
- * Simple business object representing a Track
- */
-@Entity
-
-@Getter
-@Setter
-@ToString
-@NoArgsConstructor
 @XmlRootElement
-@FieldDefaults(level = AccessLevel.PRIVATE)
-public class Track implements Serializable {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Integer id;
+public class DL {
+    Track id;
     String name;
     String author;
     String album;
     Integer duration;
+
+    public static void setId() {
+    }
 
 
     public Integer getId() {
@@ -35,7 +25,9 @@ public class Track implements Serializable {
     }
     @XmlAttribute
     public void setId(Integer id) {
-        this.id = id;
+        TrackServiceImpl tsl = null;
+
+        this.id = tsl.findById(id);
     }
 
     public String getName() {
@@ -70,16 +62,5 @@ public class Track implements Serializable {
         this.duration = duration;
     }
 
-    @ManyToOne
-    Genre genre;
-
-    @Builder
-    public Track(Integer id, String name, String author, String album, Integer duration, Genre genre) {
-        this.id = id;
-        this.name = name;
-        this.author = author;
-        this.album = album;
-        this.duration = duration;
-        this.genre = genre;
-    }
 }
+*/

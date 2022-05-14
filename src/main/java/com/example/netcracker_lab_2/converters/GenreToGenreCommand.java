@@ -20,5 +20,6 @@ public class GenreToGenreCommand implements Converter<Genre, GenreCommand> {
                 .id(source.getId())
                 .name(source.getName())
                 .build();
+
     }
 }

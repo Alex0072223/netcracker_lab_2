@@ -21,6 +21,7 @@ public class IndexController {
     @RequestMapping({"/", ""})
     public String init() {
         return "index";
+
     }
 
     @GetMapping({"/find", "/find/"})

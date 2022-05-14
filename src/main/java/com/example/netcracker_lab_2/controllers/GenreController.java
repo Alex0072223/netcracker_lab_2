@@ -27,6 +27,7 @@ public class GenreController {
         model.addAttribute("genres", genreService.findAll());
 
         return "databaseDirectory/genre/database";
+
     }
 
     @GetMapping({"{id}/update/", "{id}/update"})
