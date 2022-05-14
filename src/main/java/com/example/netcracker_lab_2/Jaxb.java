@@ -37,6 +37,7 @@ public class Jaxb {
         user.setId(1);
         user.setName("Monster");
         user.setAlbum("Monstro");
+        user.setAuthor("Lil NasX");
         toJSON(user);
 
 

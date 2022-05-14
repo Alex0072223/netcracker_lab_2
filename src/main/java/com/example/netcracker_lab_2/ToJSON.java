@@ -9,6 +9,11 @@ public class ToJSON {
     @JsonProperty("Name of track")
     private String name;
 
+
+
+    @JsonProperty("Name of Author")
+    private String author;
+
     @JsonProperty("Name of Album")
     private String album;
 
@@ -18,11 +23,12 @@ public class ToJSON {
     public ToJSON() {
     }
 
-    public ToJSON(long id, String name, String phone, String level) {
+    public ToJSON(long id, String name, String album, String level) {
         this.id = id;
         this.name = name;
-        this.album = phone;
+        this.album = album;
         this.level = level;
+        this.author = author;
     }
 
     public long getId() {
@@ -47,6 +53,13 @@ public class ToJSON {
 
     public void setAlbum(String phone) {
         this.album = phone;
+    }
+    public String getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
     }
 
     public String getLevel() {
